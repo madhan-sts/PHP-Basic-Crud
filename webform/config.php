@@ -1,5 +1,7 @@
 <?php
-define('DB_SERVER','172.19.0.2');
+
+$db_host = getenv('MY_SQL_HOST', true) ?getenv('MY_SQL_HOST'): 'localhost';
+define('DB_SERVER',$db_host);
 // define('DB_SERVER','localhost');
 define('DB_USERNAME','root');
 define('DB_PASSWORD','root');
